@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/db0c7c9ea3.js" crossorigin="anonymous"></script>
+        <style>
+        /*#region background style*/
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+            body{
+                overflow: hidden;
+                font-family: 'Roboto', sans-serif;
+            }
+            .background{
+
+                height: 100%;
+                width:100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                
+
+                animation-name: pozadi;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                background-image:url("https://static.vecteezy.com/system/resources/previews/000/621/684/large_2x/abstract-dark-blue-squares-pattern-background-subtle-lattice-luxury-style-trellis-repeat-geometric-grid-vector.jpg");
+                background-size:cover;
+            }
+            @keyframes pozadi{
+                0%{
+                    filter:saturate(1);
+                }
+                50%{
+                    filter: saturate(0.7);
+                }
+                100%{
+                    filter: saturate(1);
+                }
+            }     
+        /*#endregion background style*/
+        /*#region menu style*/
+        #crossroad{
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #crossroad > #main{
+                height: 30vh;
+                width: 50vw;
+                
+                margin-top: 30vh;
+                margin-left: auto;
+                margin-right: auto;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                
+                position: relative;
+
+                overflow: hidden;
+
+                background-color: rgb(255, 195, 0);
+
+                border-style: solid;
+                border-width: 5px;
+                border-color: orange;
+                border-radius: 10px;
+
+            }
+
+            .contact{
+                width: 100%;
+            }
+            .info{
+                height: 40%;
+                margin: 0px;
+                padding: 5px;     
+                text-align: center;   
+                
+                
+            }
+            .info > p > a{
+                color: black;
+            }
+            #crossroad p{
+                margin-top: 0px;
+                font-size: 0.9em;
+            }
+            .links{
+                height: 50%;
+                font-size: 30px;
+                text-align: center;
+                letter-spacing: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                color: black;
+            }
+
+            .links a{
+                color: black;
+            }
+
+            .links a:hover{
+                animation-name: icons;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+
+                color: rgb(56, 56, 56);
+            }
+
+            @keyframes icons{
+                0%{
+                    size: initial;
+                }
+                100%{
+                    size: 30px
+                }
+            }
+
+            #crossroad .text{
+                background-color: rgb(255, 205, 0);
+                width: 150%;
+
+                text-align: center;
+                padding: 5px;
+            }
+            #crossroad .menu{
+                background-color: rgb(255, 195, 0);
+                width: 100%;
+                text-align: center;
+                color: black;
+            }
+            #crossroad .about{
+                padding: 5px;
+                padding-top: 5vh;
+                height: 30%;
+                font-size: xx-large;
+                border-bottom: 5px solid;
+            }
+            #crossroad .about > a{
+                color: black;
+                text-decoration: none;
+            }
+            #crossroad .menu > a{
+                color: black;
+                text-decoration: none;
+            }
+            .zivotopis{
+                padding: 5px;
+                padding-top: 5vh;
+                height: 50%;
+                font-size: xx-large;
+                
+            }
+            .about:hover{
+                cursor: pointer;
+            }
+            .zivotopis:hover{
+                cursor: pointer;
+            }
+            /*#endregion menu style*/
+        /*#region about style*/
+            #about{
+                /* display: none; */
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        #about > .main{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30vh;
+
+                height: 40vh;
+                width: 50vw;
+
+                background-color: rgb(1, 24, 99);
+
+                display: flex;
+                flex-direction: column;
+
+                border-radius: 20px;
+                overflow: hidden;
+
+                font-size: 0.7em;
+
+            }
+            #about > .main > a{
+                position: relative;
+                overflow: visible;
+            }
+            #about > .text{
+                height: 95%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+            .parts{
+                height: 100%;
+                width: 100%;
+                background-color: rgb(1, 25, 100);
+                border: black;
+                border-style: solid;
+                border-width: 1px;
+            }
+            .back{
+                background-color: black;
+                width: 100%;
+                height: 10%;
+            }
+            #about > p{
+                color:white;
+                padding: 15px;
+                padding-top: 9px;
+                font-family: 'Roboto', sans-serif;
+                height: 50vh;
+            }
+            #about > h1{
+                color: white;
+                padding-left: 15px;
+                font-family: 'Roboto', sans-serif;
+            }
+            #about > a{
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                height: 20px;
+                width: 100%;
+                overflow: visible;
+            }
+            .hide{
+                position: relative;
+                background-color: rgb(0, 25, 100);
+                height: 100%;
+                width: 100%;
+                top: -60vh;
+                left: 0;
+                text-align: center;
+                padding-top: 10vh;
+            }
+            .hide:hover{
+                animation-name: hider;
+                animation-duration: 1s;
+                -o-animation-duration: 1s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+            @keyframes hider{
+                0%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                    /* visibility: hidden; */
+                    /* display: none; */
+                }
+            }
+            .parts > p{
+                left: 0;
+                top: 0;
+                white-space: normal;
+            }
+        /*#endregion about style*/
+        /*#region document style*/
+        #document{
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+
+            z-index: 2;
+        }
+        #document > #main{
+
+
+                height: 95vh;
+                width: 40vw;
+
+                margin-left: auto;
+                margin-right: auto;
+
+                border: solid 3px rgba(0, 124, 225, 0.5);
+                border-radius: 10px;
+
+                color: white;
+                background-color: rgb(0, 25, 100);
+
+                display: grid;
+                grid-template-columns: 12vw auto;
+                grid-template-rows: 15vh auto auto auto auto auto 3vh;
+                grid-template-areas:
+                 "photo header"
+                 "name  info"
+                 "name1 info1"
+                 "name2 info2"
+                 "name3 info3"
+                 "name4 info4"
+                 "back0 back1"
+                 ;
+
+                overflow: hidden;    
+
+                text-align: center;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+                /* display: none; */
+                
+            }
+            #photo{
+                border-radius: 200px;
+                overflow: hidden;
+                background-image: url(https://i.insider.com/5c5dd439dde867479d106cc2?width=1000&format=jpeg&auto=webp);
+                background-size: cover;
+                
+                border-style: solid;
+                border-color: rgb(45, 75, 175);
+                margin: 10%;
+            }
+            img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+            #document > .topic{
+                text-align: end;
+                padding-right: 10%;
+            }
+            #document > .info{
+                background-color: rgb(45, 75, 175);
+                align-content: center;
+                padding-top: 2vh;
+            }
+            #document > b{
+                font-size: 1.5em;
+            }
+            #document > p{
+                font-size: 0.75em;
+            }
+            #document > #back{
+                text-align: center;
+                grid-column-start: back0;
+                grid-column-end: back1;
+            }
+            #document > #back > p{
+                margin: 0;
+                color: white;
+            }
+        /*#endregion document style*/
+            #AboutShow{
+                height: 30vh;
+                width: 50vw;
+                
+                margin-top: 30vh;
+                margin-left: auto;
+                margin-right: auto;
+
+                background-color: rgb(255, 195, 0);
+
+                border-style: solid;
+                border-width: 5px;
+                border-color: orange;
+                border-radius: 10px;
+
+                display: none;
+            }
+            #DocumentShow{
+                height: 30vh;
+                width: 50vw;
+                
+                margin-top: 30vh;
+                margin-left: auto;
+                margin-right: auto;
+
+                background-color: rgb(255, 195, 0);
+
+                border-style: solid;
+                border-width: 5px;
+                border-color: orange;
+                border-radius: 10px;
+
+                display: none;
+            }
+            #test{
+                height: 50px;
+                width: 100px;
+                top: 0;
+                left: 0;
+                color: white;
+            }
+    </style>
+    </head>
+    <body>
+        <!--#region background content-->
+
+        <div class="background">
+
+        </div>        
+        <!--#endregion background content-->
+        <!--#region menu content-->
+<div id="crossroad">
+        <div id="main">
+            <div class="contact">
+                <div class="info">
+                    <p>
+                        Email: <a href="mailto:nikiton10g@gmail.com">nikiton10g@gmail.com</a>
+                        <br> Tel.: (+420) 775 977 966
+                    </p>
+                </div>
+                <div class="links">
+                    <a href="https://www.facebook.com/nikita.kilchytski.1/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/channel/UCeR4tpNZBQxJteGcQs7Ug5Q"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.reddit.com/user/Nikit0n"><i class="fab fa-reddit"></i></a>
+                    <a href="https://steamcommunity.com/profiles/76561198433666631"><i class="fab fa-steam-symbol"></i></a>
+                </div>
+            </div>
+            <div class="text">
+                <p>
+                    Čau! Rád tě vidím na mé stránce. Slouží hlavně jako ukázka mých kontaktů a informací o mně, ale nebojte, v budoucnu toho bude o hodně víc ;). Zatím si tu užívejte fůru textu, takže doufám že máte rádi čtení.
+                </p>
+            </div>
+            <div class="menu">
+                <div class="about" onclick="F_AboutShow()">
+                        <p>O mně</p>
+                </div>
+                <div class="zivotopis" onclick="F_DocumentShow()">
+                    <p>Životopis</p>
+                </div>
+            </div>
+        </div>
+</div>
+        <!--#endregion menu content-->
+        <!--#region about content-->
+<div id="about">
+        <div class="main">
+            <div class="text">
+
+                <div class="parts">
+                    <p>
+Jsem 17-ti letý student 2. ročníku střední průmyslové školy ve Smíchově. Je pravda že jsem měl nulovou zkušenost před nástupem do této školy, ale i předtím jsem se hodně zajímal o IT a o co se vlastně děje v našich počítačích. V  dnešní době se snažím "dohnat" svoje spolužáky v jejich znalostech a pořád se učit novým věcem. 
+                    </p>                    
+                    <div class="hide">
+                        <h1>Kdo?</h1>               
+                    </div>
+                </div>
+
+                <div class="parts">
+                    <p>
+                        Jak už jsem řekl, zajímali mě počítače a různé znalosti z IT. Velkým plusem také bylo, že velká porce programování závisí na logice a logických obvodech, což mě velmi zajímalo. Navíc tvořit svoje vlastní výtvory, které by byli k užitku by také nebylo na škodu. Navíc.. mám obě ruce levé a jako automechanik bych nepřežil ani týden..
+                    </p>
+                    <div class="hide">
+                        <h1>Proč?</h1>               
+                    </div>
+                </div>
+                <div class="parts">
+                    <p>
+                        Velká pomoc přišla právě z mé školy, která umí učit i největší začátečníky, jako jsem byl já. Tato příležitost mi velice pomohla začít se zajímat o programování, nýbrž předtím jsem to celé viděl jako jedno velké strašidelné téma plné neznámých, metod, tříd a mnoho dalších. V současnosti se snažím rozšířit zvoje znalosti pomocí základů které mi SSPŠ umožnila.
+                    </p>
+                    <div class="hide">
+                        <h1>Jak?</h1>               
+                    </div>
+                </div>
+            </div>
+            <a href="Z_Menu2.html" class="back">
+                <b>Back</b>
+            </a>
+        </div>
+</div> 
+        <!--#endregion about content-->
+        <!--#region document content-->
+        <main id="main">
+            <div id="photo">
+                 <!--pokud jsem tam nechal fotku shreka, tak se omlouvam, cuz svoje fotky nemuzu najit ani na discordu-->
+            </div>
+            <div class="info">
+                <b>Nikita Kilchytski</b>
+            </div>
+            <div class="topic">
+                <p>
+                    Kontakty
+                </p>
+            </div>
+            <div class="info">
+                <p> 2. 3. 2004
+                    <br>+420 775 977 966
+                    <br>Čerčany 257 22
+                    <br>Nikiton10g@gmail.com
+                </p>
+            </div>
+            <div class="topic">
+                <p>
+                    Vzdělání
+                </p>
+            </div>
+            <div class="info">
+                <p>
+                    Základní škola Tomáše Garriga Masaryka v Mnichovicích - Základní Vzdělání
+                    <br>Smíchovská Střední Průmyslová Škola (Druhý ročník) - Střední Vzdělání
+                </p>
+            </div>
+            <div class="topic">
+                <p>
+                    Praxe
+                </p>
+            </div>
+            <div class="info">
+                <p>
+                    Pragensis (Reprezentant školy) - 2020
+                    <br>PREF (Asistent) - 2020
+                    <br>Domácí IT technik - 2014->
+                </p>
+            </div>
+            <div class="topic">
+                <p>
+                    Jazyky
+                </p>
+            </div>
+            <div class="info">
+                <p>
+                    Angličtina - pokročilý
+                    <br>Ruština - mírně pokročilý / rodilý mluvčí
+                    <br>Němčína - Začátečník
+                </p>
+            </div>
+            <div class="topic">
+                <p>
+                    Zájmy
+                </p>
+            </div>
+            <div class="info">
+                <p>
+                    Informační & Moderní Technologie
+                    <br>Virtuální Realita
+                    <br>Animace
+                </p>
+            </div>
+                <a href="Z_Menu2.html" id="back">
+                    <p>
+                        Back
+                    </p>
+                </a>  
+        </main>
+
+        <!--#endregion document content-->
+        <div id="test">
+
+        </div>
+        <div id="AboutShow">aboutshow</div>
+        <div id="DocumentShow">DocumentShow</div>
+    <script>
+        var menu = document.getElementById("Crossroad")
+        var about = document.getElementById("about")
+        var doc = document.getElementById("document")
+        var aboutS = document.getElementById("AboutShow")
+        var docS = document.getElementById("DocumentShow")
+        
+        about.style.display = none
+        doc.style.display = none
+
+        function F_AboutShow(){
+            console.log("About")
+            menu.style.visibility = hidden
+            about.style.visibility = visible
+        }
+        function F_DocumentShow(){
+            console.log("Document")
+            menu.hidden = true
+            doc.hidden = false
+        }
+    </script>
+    </body>
+</html>
